@@ -14,7 +14,7 @@
     "draft-7"
   ],
   "author": "Cole (Mike)",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "dependencies": {
     "yargs": "^17.7.2"
   }
