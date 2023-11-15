@@ -1,0 +1,21 @@
+{
+  "name": "oscal-json-doctor",
+  "version": "0.0.1",
+  "description": "Used to fix oscal json documents with $id and $ref by replacing $ref with the desired type so that oscal json will work with draft-7 validators",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "oscal",
+    "json",
+    "json-schema",
+    "json-schema",
+    "draft-7"
+  ],
+  "author": "Cole (Mike)",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
+}
