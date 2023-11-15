@@ -11,7 +11,7 @@ The json schemas provided by OSCAL are not correctly formatted JSON Draft-07 sch
 - Currently only works when the `$ref` points to a definition within the `definitions` field. ie (`#/definitions/some-definition`)
 
 
-## Example
+## Example Result
 ```json
 // This
 {
@@ -34,6 +34,13 @@ The json schemas provided by OSCAL are not correctly formatted JSON Draft-07 sch
             "format" : "uri-reference"
         },
 }
+```
+
+## Example
+```bash
+# Takes the input file and output file from the command line args and processes the JSON
+# Replaces original if no output file is specified
+node index.js input.json output.json
 ```
 
 
