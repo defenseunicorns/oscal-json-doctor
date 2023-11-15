@@ -11,5 +11,31 @@ The json schemas provided by OSCAL are not correctly formatted JSON Draft-07 sch
 - Currently only works when the `$ref` points to a definition within the `definitions` field. ie (`#/definitions/some-definition`)
 
 
+## Example
+```json
+// This
+{
+    "json-schema-directive" : 
+        { 
+            "title" : "Schema Directive",
+            "description" : "A JSON Schema directive to bind a specific schema to its document instance.",
+            "$id" : "#json-schema-directive",
+            "$ref" : "#/definitions/URIReferenceDatatype" 
+        },
+}
+// Gets replaced with
+{
+    "json-schema-directive" : 
+        { 
+            "title" : "Schema Directive",
+            "$id" : "#json-schema-directive",
+            "description" : "A URI Reference, either a URI or a relative-reference, formatted according to section 4.1 of RFC3986.",
+            "type" : "string",
+            "format" : "uri-reference"
+        },
+}
+```
+
+
 ### Authors
 - Michael (Cole) Winberry
