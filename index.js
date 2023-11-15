@@ -17,7 +17,7 @@ function processJson(obj, parentObj, parentKey) {
                         for (const refPart of refParts) {
                             replaceValue = replaceValue[refPart];
                         }
-                        obj[key] = {...obj[key], ...replaceValue};
+                        obj[key] = {...replaceValue, ...obj[key]};
                     }
                     else {
                         console.log(`$ref ${obj[key]['$ref']} not supported. Only $ref to definitions supported.`)
