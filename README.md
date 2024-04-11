@@ -1,4 +1,4 @@
-# OSCAL JSON Schema Doctor
+# [ARCHIVED] in favor of [go-oscal](github.com/defenseunicorns/go-oscal) `go-oscal doctor` cmd 
 
 ## Why?
 The json schemas provided by OSCAL are not correctly formatted JSON Draft-07 schemas. Specifically they make use of the `$ref` and `$id` fields within the same definitions. When `$ref` and `$id` both exist in Draft-07 everything but the `$ref` is ignored causing problems with any other types that reference the ignored `$id`. This script replaces the `$ref` key in objects that contain both `$ref` and `$id` with the type that `$ref` references. Allowing the json to be properly parsed by JSON schema validators such as [https://github.com/santhosh-tekuri](https://github.com/santhosh-tekuri). 
